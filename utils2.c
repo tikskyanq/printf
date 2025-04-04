@@ -14,6 +14,11 @@
 
 void	ft_handle_pointer(unsigned long ptr, int *count)
 {
+	if (!ptr)
+	{
+		ft_putstr("(nil)", count);
+		return ;
+	}
 	write(1, "0x", 2);
 	*count += 2;
 	ft_write_ptr(ptr, count);

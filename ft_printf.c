@@ -36,14 +36,13 @@ int	ft_printf(const char *format, ...)
 {
 	va_list	args;
 	int		count;
-	char	*str;
 
 	count = 0;
 	va_start(args, format);
 	while (*format)
 	{
 		if (*format == '%' && *(format + 1))
-			format += ft_handle_format(&format, args, &count);
+			format += ft_handle_format(&format, args, &count) - 1;
 		else
 			ft_putchar(*format, &count);
 		format++;
@@ -139,7 +138,7 @@ void	ft_handle_string(char *str, int *count)
 // 	va_end(args);
 // 	return (count);
 // }
-
+/*
 int main()
 {
 	char *c = "Tiks";
@@ -147,4 +146,4 @@ int main()
 	ft_printf("meri qanaky->%d\n", ft_printf("mery->%X\n",1245));
 	// ft_printf("%d\n", count);
 	printf("%d\n",printf("dzer->%X\n",1245));
-}
+}*/
