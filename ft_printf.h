@@ -23,7 +23,7 @@ int		ft_printf(const char *format, ...);
 void	ft_write_lower_x(unsigned int n, int *count);
 void	ft_write_up_x(unsigned long n, int *count);
 void	ft_write_ptr(unsigned long n, int *count);
-void	ft_putunsignednbr(int n, int *count);
+void	ft_putunsignednbr(unsigned int n, int *count);
 void	ft_putnbr(int n, int *count);
 void	ft_putstr(char *s, int *count);
 void	ft_putchar(char c, int *count);
